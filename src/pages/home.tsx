@@ -1,12 +1,15 @@
 // import { View } from "app-studio";
 import style from "../stylesheet/home.module.scss";
 import { View } from "app-studio";
+import { NavBar } from "../components/navigation/NavBar";
 // import { useSelector } from "react-redux";
 
 const HomePage = () => {
   return (
     <View id={style.container}>
-      <section id={style.home}>home</section>
+      <section id={style.home}>
+        <NavBar />
+      </section>
       <section id={style.innovation}>innovation</section>
       <section id={style.about}>about</section>
       <section id={style.properties}>properties</section>

@@ -3,8 +3,7 @@ section {
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 0 120px;
 }
 #container {
   height: 100vh;
@@ -12,13 +11,17 @@ section {
   overflow-y: scroll;
 }
 
-#home,
-#contact {
-  background-color: yellow;
+#home {
+  padding: 44px 120px 0;
+  background: linear-gradient(42.43deg, #c6dbff 0%, #e1ebfa 52.25%);
 }
 
 #about {
   background-color: blue;
+}
+
+#contact {
+  padding: 0 0 44px;
 }
 // Small devices & medium devices
 @media (max-width: 767px) {
