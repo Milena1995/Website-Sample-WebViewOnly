@@ -1,19 +1,10 @@
 a {
   color: #678c92;
-  font-family: "Noto Sans";
-  font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 32px;
 }
 
-.menu_content {
-  display: flex;
-  align-items: center;
-  justify-self: center;
-  height: 100%;
-  //   padding: 0 130px;
-}
 li {
   padding: 0 50px;
 }
@@ -24,7 +15,15 @@ li:hover {
   transition: background-color 1s ease-out 50ms;
   opacity: 0.4;
   width: 100%;
+
   & a {
     color: white;
   }
+}
+
+.menu_content {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  height: 100%;
 }

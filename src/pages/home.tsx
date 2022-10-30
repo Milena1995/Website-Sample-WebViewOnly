@@ -2,6 +2,7 @@
 import style from "../stylesheet/home.module.scss";
 import { View } from "app-studio";
 import { NavBar } from "../components/navigation/NavBar";
+import { HomeContent } from "../components/HomeContent";
 // import { useSelector } from "react-redux";
 
 const HomePage = () => {
@@ -9,6 +10,7 @@ const HomePage = () => {
     <View id={style.container}>
       <section id={style.home}>
         <NavBar />
+        <HomeContent />
       </section>
       <section id={style.innovation}>innovation</section>
       <section id={style.about}>about</section>

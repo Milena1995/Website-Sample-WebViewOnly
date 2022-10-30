@@ -1,4 +1,9 @@
 /* Remove default value */
+
+$darkGreen: #486a6f;
+$primary: #4397a4;
+$secondary: #c6dbff;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +24,8 @@ img {
 
 body {
   font-size: 1em;
-  font-family: "Oxygen", sans-serif;
+  font-family: "Noto Sans";
+  font-style: normal;
   // To position bottom footer
   height: 100vh;
   display: flex;

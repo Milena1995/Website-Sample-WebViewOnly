@@ -1,4 +1,7 @@
 import { View } from "app-studio";
+
+import { H3Medium } from "../Text";
+
 import style from "../../stylesheet/menu.module.scss";
 
 export const Menu = () => {
@@ -14,7 +17,9 @@ export const Menu = () => {
       <ul className={style.menu_content}>
         {menu.map((item, index) => (
           <li key={`${item.name}${index}`}>
-            <a href={item.href}>{item.name}</a>
+            <H3Medium>
+              <a href={item.href}>{item.name}</a>
+            </H3Medium>
           </li>
         ))}
       </ul>
