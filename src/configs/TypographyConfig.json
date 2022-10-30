@@ -6,6 +6,13 @@
         "fontSize": 24,
         "lineHeight": 44
     },
+    "H2lBold": {
+        "fontFamily": "Noto Sans",
+        "fontStyle": "normal",
+        "fontWeight": 700,
+        "fontSize": 36,
+        "lineHeight": 48
+    },
     "H3Medium": {
         "fontFamily": "Noto Sans",
         "fontStyle": "normal",

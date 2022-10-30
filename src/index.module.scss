@@ -3,6 +3,8 @@
 $darkGreen: #486a6f;
 $primary: #4397a4;
 $secondary: #c6dbff;
+$darkGreen2: #678c92;
+$lightBlue: #f4f7ff;
 
 * {
   box-sizing: border-box;
@@ -20,6 +22,7 @@ ul {
 
 img {
   width: 100%;
+  object-fit: fill;
 }
 
 body {
