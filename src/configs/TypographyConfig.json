@@ -40,5 +40,19 @@
         "fontWeight": 400,
         "fontSize": 22,
         "lineHeight": 36
+    },
+    "FormLabel": {
+        "fontFamily": "Noto Sans",
+        "fontStyle": "normal",
+        "fontWeight": 400,
+        "fontSize": 14,
+        "lineHeight": 19
+    },
+    "IconListValue": {
+        "fontFamily": "Noto Sans",
+        "fontStyle": "normal",
+        "fontWeight": 400,
+        "fontSize": 14,
+        "lineHeight": 19
     }
 }

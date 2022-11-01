@@ -1,9 +1,14 @@
-import style from "../stylesheet/home.module.scss";
 import { View } from "app-studio";
+
 import { NavBar } from "../components/navigation/NavBar";
 import { HomeContent } from "../components/HomeContent";
-import { Innovation } from "../components/innovation/Innovation";
-import { About } from "../components/About";
+import { InnovationContent } from "../components/innovation/InnovationContent";
+import { AboutContent } from "../components/About";
+import { PropertiesContent } from "../components/PropertiesContent";
+import { SocialsContent } from "../components/SocialsContent";
+import { ContactContent } from "../components/contact/ContactContent";
+
+import style from "../stylesheet/home/home.module.scss";
 
 const HomePage = () => {
   return (
@@ -13,14 +18,20 @@ const HomePage = () => {
         <HomeContent />
       </section>
       <section id={style.innovation}>
-        <Innovation />
+        <InnovationContent />
       </section>
       <section id={style.about}>
-        <About />
+        <AboutContent />
       </section>
-      <section id={style.properties}>properties</section>
-      <section id={style.socials}>socials</section>
-      <section id={style.contact}>contact</section>
+      <section id={style.properties}>
+        <PropertiesContent />
+      </section>
+      <section id={style.socials}>
+        <SocialsContent />
+      </section>
+      <section id={style.contact}>
+        <ContactContent />
+      </section>
     </View>
   );
 };

@@ -1,0 +1,11 @@
+img {
+  object-fit: fill;
+
+  border-radius: 3px;
+}
+
+.imageTile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}

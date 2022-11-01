@@ -1,0 +1,28 @@
+@use "src/index.module.scss" as colStyle;
+img {
+  object-fit: fill;
+}
+.img_1 {
+  width: 194px;
+  height: 260px;
+}
+.img_2 {
+  width: 243px;
+  height: 331px;
+}
+.img_4 {
+  width: 232px;
+  height: 205px;
+}
+.img_5 {
+  width: 215px;
+  height: 135px;
+}
+.title {
+  color: colStyle.$darkGreen;
+  margin: 20px 0;
+}
+.subTitle {
+  color: colStyle.$darkGreen2;
+  margin-bottom: 40px;
+}

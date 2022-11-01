@@ -12,6 +12,7 @@
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
     "app-studio": "^0.1.7",
+    "formik": "^2.2.9",
     "g": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -29,7 +30,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "text":"node ./scripts/text.js"
+    "text": "node ./scripts/text.js"
   },
   "eslintConfig": {
     "extends": [

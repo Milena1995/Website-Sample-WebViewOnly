@@ -2,17 +2,18 @@ import { Button, View } from "app-studio";
 import { Horizontal, Vertical } from "../layout/layout";
 import { H2lBold, H3Medium } from "./Text";
 
-import style from "../stylesheet/about.module.scss";
-import btnStyle from "../stylesheet/button.module.scss";
 import { useNavigate } from "react-router-dom";
 
-import { ReactComponent as Infinity } from "../assets/svg/InfinityLogo.svg";
-import { ReactComponent as FingerPrint } from "../assets/svg/FingerPrintLogo.svg";
-import { ReactComponent as IpsumLogo } from "../assets/svg/IpsumLogo.svg";
+import { ReactComponent as Infinity } from "../assets/svg/Infinity.svg";
+import { ReactComponent as FingerPrint } from "../assets/svg/FingerPrint.svg";
+import { ReactComponent as IpsumLogo } from "../assets/svg/Ipsum.svg";
 import { ReactComponent as NLogo } from "../assets/svg/NLogo.svg";
-import { ReactComponent as DotsLogo } from "../assets/svg/ThreeDotsLogo.svg";
+import { ReactComponent as DotsLogo } from "../assets/svg/ThreeDots.svg";
 
-export const About = () => {
+import style from "../stylesheet/about/about.module.scss";
+import btnStyle from "../stylesheet/button.module.scss";
+
+export const AboutContent = () => {
   const logos = [
     <Infinity />,
     <FingerPrint />,
@@ -51,7 +52,7 @@ export const About = () => {
             viverra vel ultrices in, congue sed ex.
           </H3Medium>
           <Button
-            className={btnStyle.btn_about}
+            className={btnStyle.btn_explore}
             onClick={() => {
               nagivate("/about");
             }}
