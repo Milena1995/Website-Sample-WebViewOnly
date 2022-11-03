@@ -1,0 +1,55 @@
+@use "src/index.module.scss" as colStyle;
+
+label {
+  color: #678c92;
+}
+
+input {
+  height: 40px;
+  border: 1px solid #486a6f;
+  border-radius: 3px;
+  color: #678c92;
+  padding: 10px;
+}
+
+textarea {
+  border: 1px solid #486a6f;
+  border-radius: 3px;
+  padding: 10px;
+  color: #678c92;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px #719ece;
+}
+
+textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 10px #719ece;
+}
+
+button {
+  background: linear-gradient(
+      104.26deg,
+      rgba(67, 151, 164, 0.2) 0.88%,
+      rgba(91, 204, 222, 0.2) 99.89%
+    ),
+    colStyle.$primary;
+  padding: 15px 55px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 5px;
+  border-width: 0;
+  color: #f4f7ff;
+}
+
+.form_container {
+  background: linear-gradient(42.43deg, #c6dbff 0%, #e1ebfa 52.25%);
+  border-radius: 5px;
+  padding: 34px;
+  filter: drop-shadow(0px 30px 60px rgba(59, 130, 246, 0.25));
+}

@@ -5,7 +5,7 @@ import { Horizontal, Vertical } from "../../layout/layout";
 import { InnovationTile } from "./InnovationTile";
 import { H2lBold } from "../Text";
 
-export const Innovation = () => {
+export const InnovationContent = () => {
   const tiles = [
     {
       icon: <WhitePen width={30} height={30} />,

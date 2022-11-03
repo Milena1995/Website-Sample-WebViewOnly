@@ -1,0 +1,47 @@
+@use "src/index.module.scss" as colStyle;
+section {
+  height: 100vh;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 120px;
+}
+
+#container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+#home {
+  padding: 44px 120px 0;
+  background: linear-gradient(42.43deg, #c6dbff 0%, #e1ebfa 52.25%);
+}
+#innovation,
+#properties,
+#contact {
+  background-color: colStyle.$lightBlue;
+}
+#about,
+#socials {
+  background-color: #e1ebfa;
+}
+
+#contact {
+  padding: 0 0 44px;
+}
+
+#properties,
+#socials,
+#contact {
+  display: flex;
+  justify-content: center;
+  padding: 44px 120px 0;
+}
+
+// Small devices & medium devices
+@media (max-width: 767px) {
+  #container {
+    background: white;
+  }
+}

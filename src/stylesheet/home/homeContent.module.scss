@@ -1,0 +1,39 @@
+@use "src/index.module.scss" as colStyle;
+img {
+  object-fit: fill;
+}
+.img_1 {
+  width: 300px;
+  height: 300px;
+}
+.img_2 {
+  width: 250px;
+  height: 250px;
+}
+.img_3 {
+  width: 130px;
+  height: 130px;
+}
+.img_4 {
+  width: 160px;
+  height: 160px;
+}
+.img_5 {
+  width: 210px;
+  height: 210px;
+}
+.title {
+  background: linear-gradient(
+      104.24deg,
+      rgba(72, 106, 111, 0.2) 42.78%,
+      rgba(91, 204, 222, 0.2) 91.91%
+    ),
+    colStyle.$darkGreen;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+.subTitle {
+  color: #678c92;
+}

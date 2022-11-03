@@ -1,9 +1,10 @@
 import { Formik } from "formik";
+import emailjs from "@emailjs/browser";
 
 import { Vertical } from "../../layout/layout";
 import { FormLabel } from "../Text";
-
 import style from "../../stylesheet/contact/form.module.scss";
+import { PUBLICKEY, SERVICEID, TEMPLATEID } from "../../configs";
 
 export const Forms = (props: any) => {
   const initialValues = {
@@ -31,63 +32,35 @@ export const Forms = (props: any) => {
     },
   ];
 
-  const handleOnSubmit = (values: any, { setSubmitting }: any) => {
+  const sendEmail = (values: any, { setSubmitting }: any) => {
     setSubmitting(false);
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-    }, 400);
+    emailjs.send(SERVICEID, TEMPLATEID, values, PUBLICKEY).then(
+      (result) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+        }, 400);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
-
-  const handleValidation = (values: any) => {
-    const errors = { username: "", email: "", subject: "", message: "" };
-
-    if (!values.email) {
-      errors.email = "Required";
-    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-      errors.email = "Invalid email address";
-    }
-
-    if (!values.username) {
-      errors.username = "Username is required";
-    }
-    if (!values.subject) {
-      errors.subject = "Subject is required";
-    }
-    if (!values.Message) {
-      errors.message = "Message is required";
-    }
-    // /*
-    //  * params: errors
-    //  * function: remove duplicate then check if errors contains at least one error message.
-    //  * returns: Object errors
-    //  */
-    if (new Set(Object.values(errors)).size !== 1) return errors;
-  };
-
   return (
     <Vertical className={style.form_container} {...props}>
       <Formik
         initialValues={initialValues}
-        validate={handleValidation}
         validateOnChange={false}
         validateOnBlur={false}
-        onSubmit={handleOnSubmit}
+        onSubmit={sendEmail}
       >
-        {({
-          values,
-          errors,
-          handleChange,
-          handleBlur,
-          handleSubmit,
-          isSubmitting,
-        }) => {
+        {({ values, handleChange, handleBlur, handleSubmit, isSubmitting }) => {
           return (
             <form className={style.form_content} onSubmit={handleSubmit}>
               <Vertical gap={28}>
                 {inputs.map((input, index) => (
                   <Vertical gap={6}>
                     <label>
-                      <FormLabel>{input.text}</FormLabel>
+                      <FormLabel>{input.text} </FormLabel>
                     </label>
                     <input
                       type={input.type}
@@ -101,7 +74,16 @@ export const Forms = (props: any) => {
                 ))}
                 <Vertical gap={6}>
                   <label>Message</label>
-                  <textarea id="message" name="message" rows={7} cols={50} />
+                  <textarea
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values["message"]}
+                    id="message"
+                    name="message"
+                    rows={7}
+                    cols={50}
+                    required
+                  />
                 </Vertical>
 
                 <button

@@ -2,12 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { Button, View } from "app-studio";
 
 import { Horizontal, Vertical } from "../layout/layout";
-import { H3Bold, SubTitle, Title } from "./Text";
+import { H2lBold, H3Medium } from "./Text";
 
-import style from "../stylesheet/home/homeContent.module.scss";
+import style from "../stylesheet/properties.module.scss";
 import btnStyle from "../stylesheet/button.module.scss";
 
-export const HomeContent = () => {
+export const PropertiesContent = () => {
   const navigate = useNavigate();
 
   const firstImgList = [
@@ -20,11 +20,6 @@ export const HomeContent = () => {
       style: style.img_2,
       src: require("../assets/images/image_2.jpg"),
       alt: "image_2",
-    },
-    {
-      style: style.img_3,
-      src: require("../assets/images/image_3.jpg"),
-      alt: "image_3",
     },
   ];
 
@@ -42,37 +37,34 @@ export const HomeContent = () => {
   ];
 
   return (
-    <Horizontal marginTop={60}>
-      <Vertical flex={1} justifyContent={"center"} alignItems={"center"}>
-        <Title className={style.title}>Development company</Title>
-        <SubTitle className={style.subTitle}>
-          Forward-thinking real estate developer, owner and investor with a
-          reputation
-        </SubTitle>
-        <Horizontal marginTop={100} gap={20} alignSelf={"flex-start"}>
-          <Button
-            className={btnStyle.btnServices}
-            onClick={() => navigate("/services")}
-          >
-            <H3Bold>Services</H3Bold>
-          </Button>
-          <Button
-            className={btnStyle.btnCompany}
-            onClick={() => navigate("/about")}
-          >
-            <H3Bold>About the Company</H3Bold>
-          </Button>
-        </Horizontal>
+    <Horizontal>
+      <Vertical flex={1} justifyContent={"center"}>
+        <H3Medium color={"#5BCCDE"}>Available Properties</H3Medium>
+        <H2lBold className={style.title}>Featured Listing</H2lBold>
+        <H3Medium className={style.subTitle}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit
+          sem, vestibulum sed leo eu, malesuada pharetra mauris. Integer
+          rhoncus, eros vel euismod tempor, ipsum magna tristique nisi, quis
+          ullamcorper enim magna eu orci. Sed semper ex quis semper aliquet.
+          Cras hendrerit molestie sapien sed fermentum. Mauris dui tortor,
+          viverra vel ultrices in, congue sed ex.
+        </H3Medium>
+        <Button
+          className={btnStyle.btn_explore}
+          onClick={() => navigate("/about")}
+        >
+          Explore
+        </Button>
       </Vertical>
       <Vertical flex={1} marginLeft={50}>
-        <Horizontal justifyContent={"center"} alignItems={"flex-end"} gap={20}>
+        <Horizontal alignItems={"center"} gap={20}>
           {firstImgList.map((image, index) => (
             <View key={`${image}${index}`}>
               <img className={image.style} src={image.src} alt={image.alt} />
             </View>
           ))}
         </Horizontal>
-        <Horizontal gap={25} marginTop={30}>
+        <Horizontal gap={25} marginTop={30} padding={"0 30px"}>
           {secondImgList.map((image, index) => (
             <View key={`${image}${index}`}>
               <img className={image.style} src={image.src} alt={image.alt} />

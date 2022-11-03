@@ -1,7 +1,6 @@
-// import { View } from "app-studio";
-import style from "../stylesheet/home.module.scss";
 import { View } from "app-studio";
-// import { useSelector } from "react-redux";
+
+import style from "../stylesheet/projects/projects.module.scss";
 
 const ProjectsPage = () => {
   return <View id={style.container}>Hello</View>;
