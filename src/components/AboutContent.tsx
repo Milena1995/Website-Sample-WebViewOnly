@@ -4,14 +4,14 @@ import { H2lBold, H3Medium } from "./Text";
 
 import { useNavigate } from "react-router-dom";
 
-import { ReactComponent as Infinity } from "../assets/svg/Infinity.svg";
-import { ReactComponent as FingerPrint } from "../assets/svg/FingerPrint.svg";
-import { ReactComponent as IpsumLogo } from "../assets/svg/Ipsum.svg";
-import { ReactComponent as NLogo } from "../assets/svg/NLogo.svg";
-import { ReactComponent as DotsLogo } from "../assets/svg/ThreeDots.svg";
+import { ReactComponent as Infinity } from "src/assets/svg/Infinity.svg";
+import { ReactComponent as FingerPrint } from "src/assets/svg/FingerPrint.svg";
+import { ReactComponent as IpsumLogo } from "src/assets/svg/Ipsum.svg";
+import { ReactComponent as NLogo } from "src/assets/svg/NLogo.svg";
+import { ReactComponent as DotsLogo } from "src/assets/svg/ThreeDots.svg";
 
-import style from "../stylesheet/about/about.module.scss";
-import btnStyle from "../stylesheet/button.module.scss";
+import style from "src/stylesheet/about/about.module.scss";
+import btnStyle from "src/stylesheet/button.module.scss";
 
 export const AboutContent = () => {
   const logos = [

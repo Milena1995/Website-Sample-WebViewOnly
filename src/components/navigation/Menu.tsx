@@ -1,8 +1,6 @@
 import { View } from "app-studio";
-
-import { H3Medium } from "../Text";
-
-import style from "../../stylesheet/menu.module.scss";
+import { H3Medium } from "src/components/Text";
+import style from "src/stylesheet/menu.module.scss";
 
 export const Menu = () => {
   const menu = [

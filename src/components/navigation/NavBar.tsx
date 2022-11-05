@@ -1,12 +1,12 @@
 import { Button } from "app-studio";
 import { useNavigate } from "react-router-dom";
 
-import { Horizontal } from "../../layout/layout";
-import { Logo } from "./Logo";
-import { Menu } from "./Menu";
-import { H3Bold } from "../Text";
+import { Horizontal } from "src/layout/layout";
+import { Logo } from "src/components/navigation/Logo";
+import { Menu } from "src/components/navigation/Menu";
+import { H3Bold } from "src/components/Text";
 
-import btnStyle from "../../stylesheet/button.module.scss";
+import btnStyle from "src/stylesheet/button.module.scss";
 
 export const NavBar = () => {
   const navigate = useNavigate();

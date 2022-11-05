@@ -1,9 +1,7 @@
 import { View } from "app-studio";
-import { Vertical } from "../../layout/layout";
-
-import { H2Bold, H3Medium } from "../Text";
-
-import iconStyle from "../../stylesheet/innovationTile.module.scss";
+import { Vertical } from "src/layout/layout";
+import { H2Bold, H3Medium } from "src/components/Text";
+import iconStyle from "src/stylesheet/innovationTile.module.scss";
 
 export const InnovationTile = ({
   icon,

@@ -1,7 +1,7 @@
-import { Horizontal, Vertical } from "../../layout/layout";
-import { H3Medium, Title } from "../Text";
-import { ContactDetails } from "./ContactDetails";
-import { Forms } from "./Forms";
+import { Horizontal, Vertical } from "src/layout/layout";
+import { ContactDetails } from "src/components/contact/ContactDetails";
+import { Forms } from "src/components/contact/Forms";
+import { H3Medium, Title } from "src/components/Text";
 
 export const ContactContent = () => {
   return (

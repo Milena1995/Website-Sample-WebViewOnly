@@ -1,7 +1,7 @@
 import React from "react";
 import { TextProps } from "app-studio";
 import { Text } from "app-studio";
-import Typography from "../configs/TypographyConfig.json";
+import Typography from "src/configs/TypographyConfig.json";
 
 export const H2Bold = (props: TextProps) => (
   <Text {...Typography.H2Bold} {...props} />

@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Button, View } from "app-studio";
 
-import { Horizontal, Vertical } from "../layout/layout";
+import { Horizontal, Vertical } from "src/layout/layout";
 import { H2lBold, H3Medium } from "./Text";
 
-import style from "../stylesheet/properties.module.scss";
-import btnStyle from "../stylesheet/button.module.scss";
+import style from "src/stylesheet/properties.module.scss";
+import btnStyle from "src/stylesheet/button.module.scss";
 
 export const PropertiesContent = () => {
   const navigate = useNavigate();
@@ -13,12 +13,12 @@ export const PropertiesContent = () => {
   const firstImgList = [
     {
       style: style.img_4,
-      src: require("../assets/images/image_4.jpg"),
+      src: require("src/assets/images/image_4.jpg"),
       alt: "image_4",
     },
     {
       style: style.img_2,
-      src: require("../assets/images/image_2.jpg"),
+      src: require("src/assets/images/image_2.jpg"),
       alt: "image_2",
     },
   ];
@@ -26,12 +26,12 @@ export const PropertiesContent = () => {
   const secondImgList = [
     {
       style: style.img_1,
-      src: require("../assets/images/image_1.jpg"),
+      src: require("src/assets/images/image_1.jpg"),
       alt: "image_1",
     },
     {
       style: style.img_5,
-      src: require("../assets/images/image_5.jpg"),
+      src: require("src/assets/images/image_5.jpg"),
       alt: "image_5",
     },
   ];

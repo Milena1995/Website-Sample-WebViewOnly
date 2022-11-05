@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Button, View } from "app-studio";
 
-import { Horizontal, Vertical } from "../layout/layout";
-import { H3Bold, SubTitle, Title } from "./Text";
+import { Horizontal, Vertical } from "src/layout/layout";
+import { H3Bold, SubTitle, Title } from "src/components/Text";
 
-import style from "../stylesheet/home/homeContent.module.scss";
-import btnStyle from "../stylesheet/button.module.scss";
+import style from "src/stylesheet/home/homeContent.module.scss";
+import btnStyle from "src/stylesheet/button.module.scss";
 
 export const HomeContent = () => {
   const navigate = useNavigate();

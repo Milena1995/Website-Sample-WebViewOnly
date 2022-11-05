@@ -1,12 +1,12 @@
 import { View } from "app-studio";
 
 import { Vertical, Horizontal } from "src/layout/layout";
-import { H3Medium, IconListValue } from "../Text";
+import { H3Medium, IconListValue } from "src/components//Text";
 
 import { ReactComponent as Phone } from "src/assets/svg/Phone.svg";
 import { ReactComponent as Mail } from "src/assets/svg/Mail.svg";
 
-import style from "../../stylesheet/icons.module.scss";
+import style from "src/stylesheet/icons.module.scss";
 
 export const ContactDetails = () => {
   const sizeIcon = {

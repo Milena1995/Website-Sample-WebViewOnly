@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import SlideModel from "../models/SlideModel";
+import SlideModel from "src/models/SlideModel";
 
 export default configureStore({
   reducer: {
