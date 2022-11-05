@@ -1,7 +1,7 @@
-const { resolve } = require("path");
-const fs = require("fs");
-const SrcPath = resolve("src");
-const Typography = require(SrcPath + "/configs/TypographyConfig.json");
+const { resolve } = require('path');
+const fs = require('fs');
+const SrcPath = resolve('src');
+const Typography = require(SrcPath + '/configs/TypographyConfig.json');
 
 let TextContents =
   'import React from "react";\n' +
@@ -11,16 +11,11 @@ let TextContents =
 
 TextContents += Object.keys(Typography).reduce((contents, tag) => {
   return `${contents} export const ${tag} = (props: TextProps) => (<Text {...Typography.${tag}} {...props}/>);\n`;
-}, "");
+}, '');
 
-fs.writeFile(
-  `${SrcPath}/components/Text.tsx`,
-  TextContents,
-  "utf8",
-  (error) => {
-    if (error) {
-      throw error;
-    }
-    console.log("src/components/Text.tsx created");
+fs.writeFile(`${SrcPath}/components/Text.tsx`, TextContents, 'utf8', (error) => {
+  if (error) {
+    throw error;
   }
-);
+  console.log('src/components/Text.tsx created');
+});

@@ -1,10 +1,10 @@
 import { View } from "app-studio";
 
-import { Vertical, Horizontal } from "../../layout/layout";
+import { Vertical, Horizontal } from "src/layout/layout";
 import { H3Medium, IconListValue } from "../Text";
 
-import { ReactComponent as Phone } from "../../assets/svg/Phone.svg";
-import { ReactComponent as Mail } from "../../assets/svg/Mail.svg";
+import { ReactComponent as Phone } from "src/assets/svg/Phone.svg";
+import { ReactComponent as Mail } from "src/assets/svg/Mail.svg";
 
 import style from "../../stylesheet/icons.module.scss";
 

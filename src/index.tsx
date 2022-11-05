@@ -5,8 +5,8 @@ import { ResponsiveProvider, ThemeProvider } from "app-studio";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { theme } from "./style/colorConfig";
 import store from "./store/store";
+import { theme } from "./configs/colorConfig";
 
 import "./index.module.scss";
 

@@ -1,44 +1,44 @@
-import { Formik } from "formik";
-import emailjs from "@emailjs/browser";
+import { Formik } from 'formik';
+import emailjs from '@emailjs/browser';
+import { useState } from 'react';
 
-import { Vertical } from "../../layout/layout";
-import { FormLabel } from "../Text";
-import style from "../../stylesheet/contact/form.module.scss";
-import { PUBLICKEY, SERVICEID, TEMPLATEID } from "../../configs";
+import { FormLabel, H3Medium } from 'src/components/Text';
+import style from 'src/stylesheet/contact/form.module.scss';
+import { Vertical } from 'src/layout/layout';
+import { PUBLICKEY, SERVICEID, TEMPLATEID } from 'src/configs';
 
 export const Forms = (props: any) => {
   const initialValues = {
-    username: "",
-    email: "",
-    subject: "",
-    message: "",
+    username: '',
+    email: '',
+    subject: '',
+    message: ''
   };
+  const [sent, setSent] = useState(false);
 
   const inputs = [
     {
-      text: "Name",
-      value: "username",
-      type: "text",
+      text: 'Name',
+      value: 'username',
+      type: 'text'
     },
     {
-      text: "Email",
-      value: "email",
-      type: "email",
+      text: 'Email',
+      value: 'email',
+      type: 'email'
     },
     {
-      text: "Subject",
-      value: "subject",
-      type: "text",
-    },
+      text: 'Subject',
+      value: 'subject',
+      type: 'text'
+    }
   ];
 
   const sendEmail = (values: any, { setSubmitting }: any) => {
-    setSubmitting(false);
+    // setSubmitting(false);
     emailjs.send(SERVICEID, TEMPLATEID, values, PUBLICKEY).then(
       (result) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-        }, 400);
+        setSent(true);
       },
       (error) => {
         console.log(error.text);
@@ -51,14 +51,23 @@ export const Forms = (props: any) => {
         initialValues={initialValues}
         validateOnChange={false}
         validateOnBlur={false}
-        onSubmit={sendEmail}
-      >
+        onSubmit={sendEmail}>
         {({ values, handleChange, handleBlur, handleSubmit, isSubmitting }) => {
           return (
             <form className={style.form_content} onSubmit={handleSubmit}>
               <Vertical gap={28}>
+                {sent && (
+                  <H3Medium
+                    color={'white'}
+                    borderRadius={4}
+                    backgroundColor={'#486a6f'}
+                    textAlign={'center'}
+                    boxShadow={'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'}>
+                    Message sent!
+                  </H3Medium>
+                )}
                 {inputs.map((input, index) => (
-                  <Vertical gap={6}>
+                  <Vertical gap={6} key={`${input}${index}`}>
                     <label>
                       <FormLabel>{input.text} </FormLabel>
                     </label>
@@ -68,6 +77,7 @@ export const Forms = (props: any) => {
                       onChange={handleChange}
                       onBlur={handleBlur}
                       value={values[input.value as keyof typeof initialValues]}
+                      autoComplete={'off'}
                       required
                     />
                   </Vertical>
@@ -77,7 +87,7 @@ export const Forms = (props: any) => {
                   <textarea
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    value={values["message"]}
+                    value={values['message']}
                     id="message"
                     name="message"
                     rows={7}
@@ -90,11 +100,8 @@ export const Forms = (props: any) => {
                   type="submit"
                   disabled={isSubmitting}
                   style={{
-                    backgroundColor: isSubmitting
-                      ? "rgba(102, 102, 102, 0.6)"
-                      : "#333333",
-                  }}
-                >
+                    opacity: isSubmitting ? 0.3 : ''
+                  }}>
                   Send Message
                 </button>
               </Vertical>

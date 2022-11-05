@@ -1,14 +1,15 @@
 import { View } from "app-studio";
 
-import { NavBar } from "../components/navigation/NavBar";
-import { HomeContent } from "../components/HomeContent";
-import { InnovationContent } from "../components/innovation/InnovationContent";
-import { AboutContent } from "../components/About";
-import { PropertiesContent } from "../components/PropertiesContent";
-import { SocialsContent } from "../components/SocialsContent";
-import { ContactContent } from "../components/contact/ContactContent";
+import { NavBar } from "src/components/navigation/NavBar";
+import { HomeContent } from "src/components/HomeContent";
+import { InnovationContent } from "src/components/innovation/InnovationContent";
+import { AboutContent } from "src/components/About";
+import { PropertiesContent } from "src/components/PropertiesContent";
+import { SocialsContent } from "src/components/SocialsContent";
+import { ContactContent } from "src/components/contact/ContactContent";
+import { Footer } from "src/components/Footer";
 
-import style from "../stylesheet/home/home.module.scss";
+import style from "src/stylesheet/home/home.module.scss";
 
 const HomePage = () => {
   return (
@@ -32,6 +33,9 @@ const HomePage = () => {
       <section id={style.contact}>
         <ContactContent />
       </section>
+      <footer id={style.footer}>
+        <Footer />
+      </footer>
     </View>
   );
 };
