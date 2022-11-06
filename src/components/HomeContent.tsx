@@ -49,7 +49,7 @@ export const HomeContent = () => {
           Forward-thinking real estate developer, owner and investor with a
           reputation
         </SubTitle>
-        <Horizontal marginTop={100} gap={20} alignSelf={"flex-start"}>
+        <Horizontal paddingTop={100} gap={20} alignSelf={"flex-start"}>
           <Button
             className={btnStyle.btnServices}
             onClick={() => navigate("/services")}

@@ -14,8 +14,8 @@ import style from "src/stylesheet/home/home.module.scss";
 const HomePage = () => {
   return (
     <View id={style.container}>
+      <NavBar />
       <section id={style.home}>
-        <NavBar />
         <HomeContent />
       </section>
       <section id={style.innovation}>

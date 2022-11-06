@@ -11,11 +11,15 @@ section {
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
+  position: relative;
 }
 
 #home {
-  padding: 44px 120px 0;
+  padding: 65px 120px 0;
   background: linear-gradient(42.43deg, #c6dbff 0%, #e1ebfa 52.25%);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #innovation,
 #properties,
