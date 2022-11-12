@@ -38,7 +38,11 @@ export const Footer = () => {
         ))}
         <Horizontal gap={20} marginTop={20}>
           <View padding={8} backgroundColor={"#678C92"} textAlign={"center"}>
-            <a href={"https://www.instagram.com/milwong1995"} rel="noreferrer">
+            <a
+              href={"https://www.instagram.com/milwong1995"}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Instagram />
             </a>
           </View>

@@ -1,4 +1,5 @@
 @use "src/index.module.scss" as colStyle;
+
 section {
   height: 100vh;
   scroll-snap-align: center;
@@ -11,15 +12,10 @@ section {
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  position: relative;
 }
 
 #home {
-  padding: 65px 120px 0;
   background: linear-gradient(42.43deg, #c6dbff 0%, #e1ebfa 52.25%);
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 #innovation,
 #properties,
@@ -43,7 +39,6 @@ section {
   padding: 44px 120px 0;
 }
 #footer {
-  width: 100vw;
   scroll-snap-align: center;
   padding: 0;
 }

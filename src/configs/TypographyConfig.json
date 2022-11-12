@@ -54,5 +54,19 @@
         "fontWeight": 400,
         "fontSize": 14,
         "lineHeight": 19
+    },
+    "StatisticLabel": {
+        "fontFamily": "Noto Sans",
+        "fontStyle": "normal",
+        "fontWeight": 700,
+        "fontSize": 16,
+        "lineHeight": 22
+    },
+    "StatisticValue": {
+        "fontFamily": "Noto Sans",
+        "fontStyle": "normal",
+        "fontWeight": 700,
+        "fontSize": 36,
+        "lineHeight": 49
     }
 }
