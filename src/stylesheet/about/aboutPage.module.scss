@@ -1,21 +1,18 @@
-.center {
-  display: flex;
-  // justify-content: center;
-  // align-items: center;
-}
 #about_home {
   background: linear-gradient(42.43deg, #c6dbff 0%, #e1ebfa 52.25%);
   height: 100vh;
+  display: flex;
 }
 #about_home_content {
-  @extend .center;
+  margin: auto;
 }
-.about_statistics,
-.about_team {
-  @extend .center;
+#about_statistics,
+#about_team {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .img_container {
-  background-color: red;
   display: grid;
   grid-template-columns: 1fr 1fr;
   flex: 1;
@@ -49,5 +46,72 @@
 
 .about_information {
   flex: 1;
-  background-color: blue;
+  justify-content: center;
+}
+
+.about_logos {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  height: 100px;
+  gap: 40px;
+  border-top: 2px solid #678c92;
+  border-bottom: 2px solid #678c92;
+}
+.about_container {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#stats_title {
+  color: #5bccde;
+}
+
+#stats_subTitle {
+  color: #486a6f;
+}
+
+.stats_container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #678c92;
+}
+
+#stats_number_container {
+  width: 1024px;
+  padding: 43px 39px;
+  border-radius: 3px;
+  background: linear-gradient(88.65deg, #c6dbff 0%, #e1ebfa 100%);
+  filter: drop-shadow(0px 30px 60px rgba(59, 130, 246, 0.25));
+  justify-content: center;
+  align-items: center;
+  margin: 140px 0 60px;
+}
+
+.stats_content {
+  padding: 0 50px;
+  gap: 40px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+      135deg,
+      rgba(103, 140, 146, 0.2) 0%,
+      rgba(158, 213, 222, 0.2) 100%
+    ),
+    #678c92;
+  border-radius: 3px;
+}
+
+.stats_number_border {
+  border-left: 2px solid #678c92;
+  border-right: 2px solid #678c92;
 }

@@ -15,6 +15,9 @@ import { ReactComponent as FingerPrint } from "src/assets/svg/FingerPrint.svg";
 import { ReactComponent as IpsumLogo } from "src/assets/svg/Ipsum.svg";
 import { ReactComponent as NLogo } from "src/assets/svg/NLogo.svg";
 import { ReactComponent as DotsLogo } from "src/assets/svg/ThreeDots.svg";
+import { ReactComponent as Location } from "src/assets/svg/Location.svg";
+import { ReactComponent as House } from "src/assets/svg/House.svg";
+import { ReactComponent as Colaboration } from "src/assets/svg/Colaboration.svg";
 import { NavBar } from "src/components/navigation/NavBar";
 
 import style from "src/stylesheet/about/aboutPage.module.scss";
@@ -62,21 +65,39 @@ const AboutPage = () => {
         </Horizontal>
       </section>
       <section id={style.about_statistics}>
-        <Vertical alignItems="center">
-          <H3Medium>Statistics</H3Medium>
-          <H2lBold>Development in numbers</H2lBold>
-          <Horizontal
-            padding="43px 0"
-            borderRadius={3}
-            background="linear-gradient(88.65deg, #C6DBFF 0%, #E1EBFA 100%)"
-          >
-            <View>
-              <View></View>
-              <Vertical>
+        <Vertical className={style.stats_container}>
+          <H3Medium id={style.stats_title}>Statistics</H3Medium>
+          <H2lBold id={style.stats_subTitle}>Development in numbers</H2lBold>
+          <Horizontal id={style.stats_number_container}>
+            <Horizontal className={style.stats_content}>
+              <View className={style.logo}>
+                <Location />
+              </View>
+              <Vertical className={style.stats_number}>
                 <StatisticValue> {">"} 200</StatisticValue>
                 <StatisticLabel>Number</StatisticLabel>
               </Vertical>
-            </View>
+            </Horizontal>
+            <Horizontal
+              className={`${style.stats_content} ${style.stats_number_border}`}
+            >
+              <View className={style.logo}>
+                <House />
+              </View>
+              <Vertical className={style.stats_number}>
+                <StatisticValue> {">"} 70</StatisticValue>
+                <StatisticLabel>Number</StatisticLabel>
+              </Vertical>
+            </Horizontal>
+            <Horizontal className={style.stats_content}>
+              <View className={style.logo}>
+                <Colaboration />
+              </View>
+              <Vertical className={style.stats_number}>
+                <StatisticValue> {">"} 20</StatisticValue>
+                <StatisticLabel>Number</StatisticLabel>
+              </Vertical>
+            </Horizontal>
           </Horizontal>
           <Horizontal className={style.about_logos}>
             {logos.map((logo) => (
