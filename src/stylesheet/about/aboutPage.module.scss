@@ -11,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
 }
 .img_container {
   display: grid;
@@ -39,9 +40,9 @@
   grid-row: 2/4;
 }
 
-.about_team {
-  width: 100%;
-  height: 100%;
+#about_team {
+  background-color: #e1ebfa;
+  height: 230vh;
 }
 
 .about_information {
@@ -114,4 +115,52 @@
 .stats_number_border {
   border-left: 2px solid #678c92;
   border-right: 2px solid #678c92;
+}
+
+.team_container {
+  padding-bottom: 131px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.teams_profile {
+  // margin-top: 40px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  height: 260px;
+  width: 300px;
+  height: 350px;
+  border-radius: 5px;
+  // filter: drop-shadow(0px 30px 60px rgba(59, 130, 246, 0.25));
+}
+.team_info {
+  padding: 20px;
+  gap: 5px;
+}
+
+.profile_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.call_us {
+  margin-top: 40px;
+  border-top: 2px solid #678c92;
+  border-bottom: 2px solid #678c92;
+  opacity: 0.8;
+  width: 100%;
+  padding: 60px;
+  justify-content: space-between;
+}
+
+#btns {
+  gap: 23px;
+}
+
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+  box-shadow: 0px 30px 60px rgba(59, 130, 246, 0.25);
 }
