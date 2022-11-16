@@ -1,0 +1,30 @@
+#home {
+  height: 100vh;
+  display: flex;
+}
+#content {
+  margin: auto;
+  gap: 100px;
+  height: 516px;
+}
+
+.img_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+}
+
+#img {
+  width: 600px;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.information {
+  flex: 1;
+  justify-content: center;
+}
+
+#features_card {
+  gap: 20px;
+}

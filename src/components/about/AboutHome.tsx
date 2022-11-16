@@ -1,6 +1,6 @@
 import { View } from "app-studio";
 import { Horizontal, Vertical } from "src/layout/layout";
-import { NavBar } from "../navigation/NavBar";
+import { NavBar } from "src/components/navigation/NavBar";
 import { H3Medium, H2lBold } from "../Text";
 
 import style from "src/stylesheet/about/aboutPage.module.scss";

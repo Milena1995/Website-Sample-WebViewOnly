@@ -1,9 +1,22 @@
+import { Features } from "src/components/services/Features";
+import MainContent from "src/components/MainContent";
+import { PageLayout } from "src/layout/pageLayout";
+import { ReserveFeatures } from "src/components/services/ReverseFeatures";
+import { ContactTile } from "src/components/ContactTile";
 import { View } from "app-studio";
 
-import style from "src/stylesheet/services/services.module.scss";
-
 const ServicesPage = () => {
-  return <View id={style.container}>Hello</View>;
+  return (
+    <PageLayout>
+      <MainContent title="Services" />
+      <Features />
+      <ReserveFeatures />
+      <Features />
+      <View padding={"0 120px 50px"}>
+        <ContactTile />
+      </View>
+    </PageLayout>
+  );
 };
 
 export default ServicesPage;

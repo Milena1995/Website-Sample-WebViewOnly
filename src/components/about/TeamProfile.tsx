@@ -9,12 +9,11 @@ interface Team {
   job: string;
 }
 export const TeamProfil = ({ img, name, job }: Team) => {
-  console.log({ img });
   return (
     <Vertical className={style.teams_profile}>
       <img
         height={260}
-        src={require("../../assets/images/image_2.jpg")}
+        src={require(`../../assets/images/${img}`)}
         alt="team_image"
       />
       <Vertical className={style.team_info}>

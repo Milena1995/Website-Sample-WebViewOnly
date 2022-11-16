@@ -1,9 +1,14 @@
-import { View } from "app-studio";
-
-import style from "src/stylesheet/projects/projects.module.scss";
+import MainContent from "src/components/MainContent";
+import { Features } from "src/components/services/Features";
+import { PageLayout } from "src/layout/pageLayout";
 
 const ProjectsPage = () => {
-  return <View id={style.container}>Hello</View>;
+  return (
+    <PageLayout>
+      <MainContent title={"Projects"} />
+      <Features />
+    </PageLayout>
+  );
 };
 
 export default ProjectsPage;
