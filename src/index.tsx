@@ -1,13 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Provider } from "react-redux";
-import { ResponsiveProvider, ThemeProvider } from "app-studio";
+import { ResponsiveProvider } from "app-studio";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import store from "./store/store";
-import { theme } from "./configs/colorConfig";
-
 import "./index.module.scss";
 
 const root = ReactDOM.createRoot(
@@ -15,7 +13,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {" "}
     <Provider store={store}>
       <ResponsiveProvider
         breakpoints={{
@@ -31,9 +28,7 @@ root.render(
           desktop: ["lg", "xl"],
         }}
       >
-        <ThemeProvider {...theme}>
-          <App />
-        </ThemeProvider>
+        <App />
       </ResponsiveProvider>
     </Provider>
   </React.StrictMode>
