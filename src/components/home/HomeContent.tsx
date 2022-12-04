@@ -13,17 +13,17 @@ export const HomeContent = () => {
   const firstImgList = [
     {
       style: style.img_4,
-      src: require("../assets/images/image_4.jpg"),
+      src: require("../../assets/images/image_4.jpg"),
       alt: "image_4",
     },
     {
       style: style.img_2,
-      src: require("../assets/images/image_2.jpg"),
+      src: require("../../assets/images/image_2.jpg"),
       alt: "image_2",
     },
     {
       style: style.img_3,
-      src: require("../assets/images/image_3.jpg"),
+      src: require("../../assets/images/image_3.jpg"),
       alt: "image_3",
     },
   ];
@@ -31,12 +31,12 @@ export const HomeContent = () => {
   const secondImgList = [
     {
       style: style.img_1,
-      src: require("../assets/images/image_1.jpg"),
+      src: require("../../assets/images/image_1.jpg"),
       alt: "image_1",
     },
     {
       style: style.img_5,
-      src: require("../assets/images/image_5.jpg"),
+      src: require("../../assets/images/image_5.jpg"),
       alt: "image_5",
     },
   ];

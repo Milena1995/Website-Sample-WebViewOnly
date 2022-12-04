@@ -2,7 +2,7 @@ import { Features } from "src/components/services/Features";
 import MainContent from "src/components/MainContent";
 import { PageLayout } from "src/layout/pageLayout";
 import { ReserveFeatures } from "src/components/services/ReverseFeatures";
-import { ContactTile } from "src/components/ContactTile";
+import { ContactTile } from "src/components/contact/ContactTile";
 import { View } from "app-studio";
 
 const ServicesPage = () => {

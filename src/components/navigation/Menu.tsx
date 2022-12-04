@@ -5,7 +5,7 @@ import style from "src/stylesheet/menu.module.scss";
 export const Menu = () => {
   const menu = [
     { name: "About", href: "/about" },
-    { name: "Service", href: "/services" },
+    { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "Contact", href: "/contact" },
   ];

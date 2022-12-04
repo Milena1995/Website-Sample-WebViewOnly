@@ -1,10 +1,12 @@
 import { View } from "app-studio";
+
 import { Vertical } from "src/layout/layout";
+import { ContactTile } from "src/components/contact/ContactTile";
+
 import { H3Medium, H2lBold } from "../Text";
+import { TeamProfil } from "./TeamProfile";
 
 import style from "src/stylesheet/about/aboutPage.module.scss";
-import { TeamProfil } from "./TeamProfile";
-import { ContactTile } from "src/components/ContactTile";
 
 export const AboutTeam = () => {
   const profiles = [

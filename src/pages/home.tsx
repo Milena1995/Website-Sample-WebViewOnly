@@ -1,8 +1,8 @@
-import { HomeContent } from "src/components/HomeContent";
+import { HomeContent } from "src/components/home/HomeContent";
 import { InnovationContent } from "src/components/innovation/InnovationContent";
-import { AboutContent } from "src/components/AboutContent";
-import { PropertiesContent } from "src/components/PropertiesContent";
-import { SocialsContent } from "src/components/SocialsContent";
+import { AboutContent } from "src/components/about/AboutContent";
+import { PropertiesContent } from "src/components/home/PropertiesContent";
+import { SocialsContent } from "src/components/home/SocialsContent";
 import { ContactContent } from "src/components/contact/ContactContent";
 import { PageLayout } from "src/layout/pageLayout";
 import { NavBar } from "src/components/navigation/NavBar";

@@ -1,6 +1,6 @@
 import { Button, View } from "app-studio";
-import { Horizontal, Vertical } from "../layout/layout";
-import { H2lBold, H3Medium } from "./Text";
+import { Horizontal, Vertical } from "../../layout/layout";
+import { H2lBold, H3Medium } from "../Text";
 
 import { useNavigate } from "react-router-dom";
 
@@ -35,7 +35,7 @@ export const AboutContent = () => {
         <img
           width={500}
           height={375}
-          src={require("../assets/images/image_1.jpg")}
+          src={require("../../assets/images/image_1.jpg")}
           alt={"image1"}
         />
         <Vertical gap={20} marginLeft={40}>

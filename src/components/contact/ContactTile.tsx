@@ -2,7 +2,7 @@ import { Button } from "app-studio";
 import { Horizontal } from "src/layout/layout";
 
 import style from "src/stylesheet/about/aboutPage.module.scss";
-import { H2Bold } from "./Text";
+import { H2Bold } from "../Text";
 
 export const ContactTile = (props: any) => {
   return (

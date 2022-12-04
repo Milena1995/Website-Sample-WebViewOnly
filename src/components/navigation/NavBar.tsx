@@ -23,7 +23,7 @@ export const NavBar = () => {
       <Button
         className={btnStyle.btn_text}
         onClick={() => {
-          navigate("/project");
+          navigate("/projects");
         }}
       >
         <H3Bold>Need a project ?</H3Bold>

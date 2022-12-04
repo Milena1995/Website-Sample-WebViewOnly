@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Button, View } from "app-studio";
 
 import { Horizontal, Vertical } from "src/layout/layout";
-import { H2lBold, H3Medium } from "./Text";
+import { H2lBold, H3Medium } from "../Text";
 
 import style from "src/stylesheet/properties.module.scss";
 import btnStyle from "src/stylesheet/button.module.scss";
