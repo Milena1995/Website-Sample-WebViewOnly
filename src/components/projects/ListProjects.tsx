@@ -1,47 +1,35 @@
-import { View } from "app-studio";
+import { useState } from "react";
 
 import { Vertical } from "src/layout/layout";
 import { ContactTile } from "src/components/contact/ContactTile";
 
 import { H2lBold, H3Bold } from "../Text";
 import { ProjectTile } from "./ProjectTile";
-
-import style from "src/stylesheet/projects/projects.module.scss";
-import { useState } from "react";
 import { Images } from "./Images";
 
+import styles from "src/stylesheet/projects/projects.module.scss";
+
 export const ListProjects = () => {
-  let [displayNo, setDisplayNo] = useState<number>(6);
-  const hasMore = Images.length > displayNo;
+  let [displayNo, setDisplayNo] = useState(6);
+  const seeMore = Images.length > displayNo;
+
+  const handleClick = () => {
+    if (seeMore) setDisplayNo(displayNo + 6);
+  };
 
   return (
-    <section id={style.project_team}>
-      <Vertical className={style.projects_container}>
-        <H2lBold color="#486A6F" paddingBottom={40}>
-          Our projects
-        </H2lBold>
-        <View className={style.project_container}>
-          {Images.map((image, index) => (
-            <>
-              {displayNo > index && (
-                <ProjectTile
-                  key={image.id}
-                  img={image.img}
-                  name={image.name}
-                  job={image.job}
-                />
-              )}
-            </>
+    <section id={styles.project_team}>
+      <Vertical className={styles.projects_container}>
+        <H2lBold className={styles.title}>Our projects</H2lBold>
+        <div className={styles.project_container}>
+          {Images.slice(0, displayNo).map((image) => (
+            <ProjectTile key={image.id} image={image} />
           ))}
-        </View>
-        {hasMore && (
-          <button
-            className={style.more_btn}
-            onClick={() => setDisplayNo(displayNo + 6)}
-          >
-            <H3Bold>More</H3Bold>
-          </button>
-        )}
+        </div>
+        {/* To do: change color to grey when disabled */}
+        <button className={styles.more_btn} onClick={handleClick}>
+          <H3Bold>More</H3Bold>
+        </button>
         <ContactTile />
       </Vertical>
     </section>

@@ -1,3 +1,9 @@
+export interface Picture {
+  id: number;
+  img: string;
+  name: string;
+  job: string;
+}
 export const Images = [
   { id: 1, img: "image_1.jpg", name: "Project Surname", job: "Info" },
   { id: 2, img: "image_3.jpg", name: "Project Surname", job: "Info" },

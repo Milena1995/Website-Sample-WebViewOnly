@@ -7,11 +7,9 @@ export const SlideModel = createSlice({
   },
   reducers: {
     increment: (state) => {
-      console.log("increment");
       state.value += 1;
     },
     decrement: (state) => {
-      console.log("decrement");
       state.value -= 1;
     },
   },

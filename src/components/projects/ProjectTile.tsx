@@ -1,26 +1,24 @@
 import { Vertical } from "src/layout/layout";
+
 import { H3Bold, H3Medium } from "../Text";
+import { Picture } from "./Images";
 
 import style from "src/stylesheet/projects/projects.module.scss";
-
-interface Team {
-  img: string;
-  name: string;
-  job: string;
+interface Props {
+  image: Picture;
 }
-export const ProjectTile = ({ img, name, job, ...props }: Team) => {
-  return (
-    <Vertical className={style.projects_profile} {...props}>
-      <img
-        height={260}
-        loading="lazy"
-        src={require(`../../assets/images/${img}`)}
-        alt="team_image"
-      />
-      <Vertical className={style.project_info}>
-        <H3Bold color="#486A6F">{name}</H3Bold>
-        <H3Medium color="#678C92">{job}</H3Medium>
-      </Vertical>
+
+export const ProjectTile: React.FC<Props> = ({ image }) => (
+  <Vertical className={style.projects_profile}>
+    <img
+      height={260}
+      loading="lazy"
+      src={require(`../../assets/images/${image.img}`)}
+      alt="team_image"
+    />
+    <Vertical className={style.project_info}>
+      <H3Bold color="#486A6F">{image.name}</H3Bold>
+      <H3Medium color="#678C92">{image.job}</H3Medium>
     </Vertical>
-  );
-};
+  </Vertical>
+);
