@@ -1,4 +1,4 @@
-import { Button, View } from "app-studio";
+import { Button } from "app-studio";
 import { Horizontal, Vertical } from "../../layout/layout";
 import { H2lBold, H3Medium } from "../Text";
 
@@ -10,8 +10,8 @@ import { ReactComponent as IpsumLogo } from "src/assets/svg/Ipsum.svg";
 import { ReactComponent as NLogo } from "src/assets/svg/NLogo.svg";
 import { ReactComponent as DotsLogo } from "src/assets/svg/ThreeDots.svg";
 
-import style from "src/stylesheet/about/about.module.scss";
 import btnStyle from "src/stylesheet/button.module.scss";
+import style from "src/stylesheet/about/about.module.scss";
 
 export const AboutContent = () => {
   const logos = [
@@ -27,15 +27,15 @@ export const AboutContent = () => {
   return (
     <Vertical className={style.about_container}>
       <Horizontal className={style.about_logos}>
-        {logos.map((logo) => (
-          <View>{logo}</View>
+        {logos.map((logo, index: number) => (
+          <div key={index}>{logo}</div>
         ))}
       </Horizontal>
       <Horizontal className={style.about_main}>
         <img
           width={500}
           height={375}
-          src={require("../../assets/images/image_1.jpg")}
+          src={"../../assets/images/image_1.jpg"}
           alt={"image1"}
         />
         <Vertical gap={20} marginLeft={40}>

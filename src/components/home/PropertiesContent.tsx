@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button, View } from "app-studio";
+import { Button } from "app-studio";
 
 import { Horizontal, Vertical } from "src/layout/layout";
 import { H2lBold, H3Medium } from "../Text";
@@ -59,16 +59,16 @@ export const PropertiesContent = () => {
       <Vertical flex={1} marginLeft={50}>
         <Horizontal alignItems={"center"} gap={20}>
           {firstImgList.map((image, index) => (
-            <View key={`${image}${index}`}>
+            <div key={`${image}${index}`}>
               <img className={image.style} src={image.src} alt={image.alt} />
-            </View>
+            </div>
           ))}
         </Horizontal>
         <Horizontal gap={25} marginTop={30} padding={"0 30px"}>
           {secondImgList.map((image, index) => (
-            <View key={`${image}${index}`}>
+            <div key={`${image}${index}`}>
               <img className={image.style} src={image.src} alt={image.alt} />
-            </View>
+            </div>
           ))}
         </Horizontal>
       </Vertical>

@@ -1,12 +1,10 @@
-import { View } from "app-studio";
-
 import { Vertical } from "src/layout/layout";
 import { ReactComponent as Instagram } from "src/assets/svg/Instagram.svg";
 import { ReactComponent as Facebook } from "src/assets/svg/Facebook.svg";
 import { Horizontal } from "src/layout/layout";
 import { H2Bold, H3Medium } from "src/components/Text";
 
-import style from "src/stylesheet/footer.module.scss";
+import styles from "src/stylesheet/footer.module.scss";
 
 export const Footer = () => {
   const servcies = ["Service 1", "Service 2", "Service 3", "Service 4"];
@@ -19,13 +17,7 @@ export const Footer = () => {
   ];
 
   return (
-    <Horizontal
-      className={style.footer_container}
-      padding={"60px 70px"}
-      justifyContent={"space-between"}
-      backgroundColor={"#486A6F"}
-      color={"white"}
-    >
+    <Horizontal className={styles.footer_container}>
       <Vertical>
         <H2Bold>Buildit</H2Bold>
         <H3Medium>Development company, 2022</H3Medium>
@@ -37,7 +29,7 @@ export const Footer = () => {
           </H3Medium>
         ))}
         <Horizontal gap={20} marginTop={20}>
-          <View padding={8} backgroundColor={"#678C92"} textAlign={"center"}>
+          <div className={styles.instagram}>
             <a
               href={"https://www.instagram.com/milwong1995"}
               target="_blank"
@@ -45,8 +37,8 @@ export const Footer = () => {
             >
               <Instagram />
             </a>
-          </View>
-          <View padding={8} backgroundColor={"#678C92"}>
+          </div>
+          <div className={styles.facebook}>
             <a
               href={"https://www.facebook.com/jonathan.wong.351104/"}
               target="_blank"
@@ -54,7 +46,7 @@ export const Footer = () => {
             >
               <Facebook />
             </a>
-          </View>
+          </div>
         </Horizontal>
       </Vertical>
       <Vertical>

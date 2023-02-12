@@ -41,3 +41,5 @@ export const InnovationContent = () => {
     </Vertical>
   );
 };
+
+InnovationContent.displayName = "InnovationContent";

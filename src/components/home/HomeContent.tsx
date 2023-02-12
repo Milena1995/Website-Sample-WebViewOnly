@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Button, View } from "app-studio";
+import { Button } from "app-studio";
 
 import { Horizontal, Vertical } from "src/layout/layout";
 import { H3Bold, SubTitle, Title } from "src/components/Text";
@@ -67,16 +67,16 @@ export const HomeContent = () => {
       <Vertical flex={1} marginLeft={50}>
         <Horizontal justifyContent={"center"} alignItems={"flex-end"} gap={20}>
           {firstImgList.map((image, index) => (
-            <View key={`${image}${index}`}>
+            <div key={`${image}${index}`}>
               <img className={image.style} src={image.src} alt={image.alt} />
-            </View>
+            </div>
           ))}
         </Horizontal>
         <Horizontal gap={25} marginTop={30}>
           {secondImgList.map((image, index) => (
-            <View key={`${image}${index}`}>
+            <div key={`${image}${index}`}>
               <img className={image.style} src={image.src} alt={image.alt} />
-            </View>
+            </div>
           ))}
         </Horizontal>
       </Vertical>

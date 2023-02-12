@@ -22,3 +22,5 @@ export const ProjectTile: React.FC<Props> = ({ image }) => (
     </Vertical>
   </Vertical>
 );
+
+ProjectTile.displayName = "ProjectTile";

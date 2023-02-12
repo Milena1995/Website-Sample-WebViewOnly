@@ -1,6 +1,4 @@
-import { View } from "app-studio";
 import { Horizontal } from "src/layout/layout";
-
 import { ReactComponent as Infinity } from "src/assets/svg/Infinity.svg";
 import { ReactComponent as FingerPrint } from "src/assets/svg/FingerPrint.svg";
 import { ReactComponent as IpsumLogo } from "src/assets/svg/Ipsum.svg";
@@ -20,8 +18,8 @@ export const AllLogos = () => {
 
   return (
     <Horizontal className={style.about_logos}>
-      {logos.map((logo) => (
-        <View>{logo}</View>
+      {logos.map((logo, index: number) => (
+        <div key={index}>{logo}</div>
       ))}
     </Horizontal>
   );

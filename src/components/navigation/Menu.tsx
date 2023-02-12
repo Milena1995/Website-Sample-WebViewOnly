@@ -1,4 +1,3 @@
-import { View } from "app-studio";
 import { H3Medium } from "src/components/Text";
 import style from "src/stylesheet/menu.module.scss";
 
@@ -11,7 +10,7 @@ export const Menu = () => {
   ];
 
   return (
-    <View className={style.menu_container}>
+    <div className={style.menu_container}>
       <ul className={style.menu_content}>
         {menu.map((item, index) => (
           <li key={`${item.name}${index}`}>
@@ -21,6 +20,8 @@ export const Menu = () => {
           </li>
         ))}
       </ul>
-    </View>
+    </div>
   );
 };
+
+Menu.displayName = "Menu";

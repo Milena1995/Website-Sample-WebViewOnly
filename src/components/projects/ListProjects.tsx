@@ -10,7 +10,7 @@ import { Images } from "./Images";
 import styles from "src/stylesheet/projects/projects.module.scss";
 
 export const ListProjects = () => {
-  let [displayNo, setDisplayNo] = useState(6);
+  const [displayNo, setDisplayNo] = useState(6);
   const seeMore = Images.length > displayNo;
 
   const handleClick = () => {
@@ -35,3 +35,5 @@ export const ListProjects = () => {
     </section>
   );
 };
+
+ListProjects.displayName = "Listprojects";

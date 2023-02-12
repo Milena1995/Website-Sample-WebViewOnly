@@ -1,5 +1,3 @@
-import { View } from "app-studio";
-
 import { Vertical } from "src/layout/layout";
 import { ContactTile } from "src/components/contact/ContactTile";
 
@@ -63,7 +61,7 @@ export const AboutTeam = () => {
         <H2lBold color="#486A6F" paddingBottom={40}>
           Let's meet
         </H2lBold>
-        <View className={style.profile_container}>
+        <div className={style.profile_container}>
           {profiles.map((image, index) => (
             <TeamProfil
               key={index}
@@ -72,7 +70,7 @@ export const AboutTeam = () => {
               job={image.job}
             />
           ))}
-        </View>
+        </div>
         <ContactTile />
       </Vertical>
     </section>

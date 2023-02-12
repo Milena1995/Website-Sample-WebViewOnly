@@ -1,5 +1,3 @@
-import { View } from "app-studio";
-
 import { Vertical } from "src/layout/layout";
 import { H2lBold, H3Medium } from "src/components/Text";
 
@@ -45,13 +43,13 @@ export const SocialsContent = () => {
       <H2lBold textAlign={"center"} margin={"10px 0 40px"} color={"#486A6F"}>
         On Instagram
       </H2lBold>
-      <View className={style.imageTile}>
+      <div className={style.imageTile}>
         {images.map((image, index) => (
-          <View key={`${image}${index}`}>
+          <div key={`${image}${index}`}>
             <img className={image.style} src={image.src} alt={image.alt} />
-          </View>
+          </div>
         ))}
-      </View>
+      </div>
     </Vertical>
   );
 };

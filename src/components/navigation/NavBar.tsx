@@ -31,3 +31,5 @@ export const NavBar = () => {
     </Horizontal>
   );
 };
+
+NavBar.displayName = "NavBar";

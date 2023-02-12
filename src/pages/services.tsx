@@ -20,3 +20,4 @@ const ServicesPage = () => {
 };
 
 export default ServicesPage;
+ServicesPage.displayName = "ServicesPage";

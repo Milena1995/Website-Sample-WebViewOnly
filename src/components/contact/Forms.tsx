@@ -35,10 +35,10 @@ export const Forms = (props: any) => {
     },
   ];
 
-  const sendEmail = (values: any, { setSubmitting }: any) => {
+  const sendEmail = (values: any) => {
     // setSubmitting(false);
     emailjs.send(SERVICEID, TEMPLATEID, values, PUBLICKEY).then(
-      (result) => {
+      () => {
         setSent(true);
       },
       (error) => {

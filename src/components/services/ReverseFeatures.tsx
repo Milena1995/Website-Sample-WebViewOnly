@@ -1,4 +1,3 @@
-import { View } from "app-studio";
 import { useNavigate } from "react-router-dom";
 
 import { Horizontal, Vertical } from "src/layout/layout";
@@ -41,14 +40,16 @@ export const ReserveFeatures = () => {
             />
           </Horizontal>
         </Vertical>
-        <View className={style.img_container}>
+        <div className={style.img_container}>
           <img
             id={style.img}
             src={require("src/assets/images/image_3.jpg")}
             alt={"imagenotavailable"}
           />
-        </View>
+        </div>
       </Horizontal>
     </section>
   );
 };
+
+ReserveFeatures.displayName = "Reserve Features";

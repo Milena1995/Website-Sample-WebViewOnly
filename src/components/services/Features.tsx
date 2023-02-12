@@ -1,4 +1,3 @@
-import { View } from "app-studio";
 import { useNavigate } from "react-router-dom";
 import { Horizontal, Vertical } from "src/layout/layout";
 
@@ -14,13 +13,13 @@ export const Features = () => {
   return (
     <section id={style.home}>
       <Horizontal id={style.content}>
-        <View className={style.img_container}>
+        <div className={style.img_container}>
           <img
             id={style.img}
             src={require("src/assets/images/image_3.jpg")}
             alt={"imagenotavailable"}
           />
-        </View>
+        </div>
         <Vertical className={style.information}>
           <H3Medium color="#5BCCDE">Service</H3Medium>
           <H2lBold id={style.subTitle}>Featured Listing</H2lBold>
@@ -51,3 +50,5 @@ export const Features = () => {
     </section>
   );
 };
+
+Features.displayName = "Features";
