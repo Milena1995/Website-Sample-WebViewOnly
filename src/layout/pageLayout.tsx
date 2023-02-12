@@ -1,17 +1,18 @@
-import { View } from "app-studio";
-
 import { Footer } from "src/components/Footer";
 
-import style from "src/stylesheet/home/home.module.scss";
 import { Vertical } from "./layout";
+
+import styles from "src/stylesheet/home/home.module.scss";
 
 export const PageLayout = ({ children }: { children: any }) => {
   return (
-    <View id={style.container}>
+    <div className={styles.container}>
       <Vertical>{children}</Vertical>
-      <footer id={style.footer}>
+      <footer className={styles.footer}>
         <Footer />
       </footer>
-    </View>
+    </div>
   );
 };
+
+PageLayout.displayName = "PageLayout";

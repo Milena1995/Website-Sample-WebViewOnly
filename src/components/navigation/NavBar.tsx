@@ -6,18 +6,14 @@ import { Logo } from "src/components/navigation/Logo";
 import { Menu } from "src/components/navigation/Menu";
 import { H3Bold } from "src/components/Text";
 
-import style from "src/stylesheet/navigation.module.scss";
+import styles from "src/stylesheet/navigation.module.scss";
 import btnStyle from "src/stylesheet/button.module.scss";
 
 export const NavBar = () => {
   const navigate = useNavigate();
 
   return (
-    <Horizontal
-      width={"100%"}
-      justifyContent={"space-between"}
-      className={style.nav_container}
-    >
+    <Horizontal className={styles.nav_container}>
       <Logo />
       <Menu />
       <Button

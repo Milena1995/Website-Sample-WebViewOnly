@@ -1,3 +1,23 @@
+@import "src/stylesheet/mixins.scss";
+
+.menu_container {
+  position: relative;
+}
+.img {
+  @include onDevice(mobile) {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+  }
+  @include onDevice(desktop) {
+    display: none;
+  }
+  @include onDevice(tablet) {
+    display: none;
+  }
+}
+
 a {
   color: #678c92;
   font-weight: 500;
@@ -24,4 +44,20 @@ li:hover {
   align-items: center;
   justify-self: center;
   height: 100%;
+
+  @include onDevice(mobile) {
+    display: none;
+  }
+}
+
+.menu_active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+  // top: 0;
+  left: 0;
 }

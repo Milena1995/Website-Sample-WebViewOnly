@@ -1,13 +1,13 @@
 import { Horizontal } from "../../layout/layout";
 import { H2Bold } from "../Text";
 
-import style from "../../stylesheet/logo.module.scss";
+import styles from "../../stylesheet/logo.module.scss";
 
 export const Logo = () => (
-  <Horizontal gap={16} alignItems={"center"}>
-    <div id={style.logo} />
+  <Horizontal className={styles.container}>
+    <div className={styles.logo} />
     <H2Bold>
-      <a href="/home" id={style.text}>
+      <a href="/home" className={styles.text}>
         Buildit
       </a>
     </H2Bold>

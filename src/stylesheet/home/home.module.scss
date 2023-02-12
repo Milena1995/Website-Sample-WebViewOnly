@@ -1,14 +1,20 @@
 @use "src/index.module.scss" as colStyle;
+@import "src/stylesheet/mixins.scss";
 
 section {
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
-  padding: 0 120px;
+  padding: 0 25px;
+  overflow-x: hidden;
+
+  @include onDevice(desktop) {
+    padding: 0 120px;
+  }
 }
 
-#container {
+.container {
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
@@ -38,13 +44,13 @@ section {
   justify-content: center;
   padding: 44px 120px 0;
 }
-#footer {
+.footer {
   scroll-snap-align: center;
   padding: 0;
 }
 // Small devices & medium devices
 @media (max-width: 767px) {
-  #container {
+  .container {
     background: white;
   }
 }
