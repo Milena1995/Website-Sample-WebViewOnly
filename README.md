@@ -1,46 +1,55 @@
-# Getting Started with Create React App
+Thanks for sharing the **package.json**! Based on this, your project is a **React.js-based web application** for a **building company**, currently only providing a frontend web view with no backend integration.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here’s an **updated README.md** reflecting this:
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **README.md**
+```md
+# Building Company Webview
 
-### `npm start`
+## Overview
+**Building Company** is a React-based web application designed to showcase real estate development projects. It provides a clean and modern UI for users to explore services and projects offered by the company. The application is currently frontend-only, built using React.js with no backend integration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features
+- **Modern and Responsive UI:** Built with React.js and Styled Components for a sleek design.
+- **Project Showcase:** A visually appealing image grid to highlight real estate developments.
+- **Navigation Menu:** Easy access to **About, Services, Projects, and Contact** sections.
+- **Call-to-Action Buttons:** Interactive buttons for better user engagement.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tech Stack
+- **Frontend:** React.js (Create React App)
+- **State Management:** Redux Toolkit
+- **Styling:** Sass & Styled Components
+- **Form Handling:** Formik
+- **Routing:** React Router DOM
 
-### `npm test`
+## Installation & Setup
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Milena1995/Website-Sample-WebViewOnly.git
+cd building-company
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
 
-### `npm run build`
+### 3️⃣ Start the development server
+```bash
+npm start
+```
+The app will be available at **http://localhost:3000/**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Scripts
+- **`npm start`** - Runs the app in development mode.
+- **`npm run build`** - Builds the app for production.
+- **`npm run test`** - Runs tests using Jest.
+- **`npm run eject`** - Ejects the Create React App configuration.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future Enhancements
+- 🔹 Backend integration for dynamic content and contact forms
+- 🔹 Admin dashboard to manage real estate listings
+- 🔹 SEO optimization for better discoverability
+- 🔹 Animations and improved UI interactions
